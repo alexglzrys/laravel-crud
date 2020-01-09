@@ -81,11 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel CRUD
+                    Laravel CRUD 6.x
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('products.index') }}">Listado de productos</a>
+                    <a href="{{ route('products.index') }}">Administrador de productos</a>
                 </div>
             </div>
         </div>
