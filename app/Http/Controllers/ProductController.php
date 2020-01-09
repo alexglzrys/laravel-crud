@@ -24,6 +24,12 @@ class ProductController extends Controller
         return view('products.create');
     }
 
+    public function edit($id)
+    {
+        $product = Product::find($id);
+        return view('products.edit', compact('product'));
+    }
+
     public function destroy($id)
     {
         $product = Product::find($id);
