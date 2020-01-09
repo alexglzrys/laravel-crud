@@ -6,6 +6,10 @@
         Listado de Productos
         <a href="{{ route('products.create') }}" class="ui button primary">Nuevo</a>
       </h3>
+      
+      <!-- Mensajes -->
+      @include('products.partials.info')
+
       <table class="ui red table striped selectable">
         <thead>
           <tr>
@@ -40,6 +44,6 @@
       {!! $products->render() !!}
     </div>
     <div class="four wide column">
-      <h3>Mensaje</h3>
+      @include('products.partials.aside')
     </div>
 @endsection

@@ -10,6 +10,6 @@
       {!! $product->body !!}
     </div>
     <div class="four wide column">
-      <h3>Mensaje</h3>
+      @include('products.partials.aside')
     </div>
 @endsection

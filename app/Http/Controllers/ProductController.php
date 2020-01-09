@@ -23,6 +23,6 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        return back()->with('info', 'Producto eliminado satisfactoriamente');
+        return back()->with('info', 'Producto eliminado satisfactoriamente del sistema');
     }
 }
