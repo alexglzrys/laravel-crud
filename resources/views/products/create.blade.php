@@ -7,6 +7,9 @@
       <a href="{{ route('products.index') }}" class="ui button primary">Listado de Productos</a>
     </h3>
 
+    <!-- Mensajes -->
+    @include('products.partials.error')
+
     <!-- Agregar componente de formulario - LaravelCollective 6 -->
     {!! Form::open(['route' => 'products.store', 'class' => 'ui form']) !!}
       @include('products.partials.form')
