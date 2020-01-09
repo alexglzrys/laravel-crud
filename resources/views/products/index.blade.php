@@ -23,10 +23,16 @@
                 {{ $product->short }}
               </td>
               <td>
-                <a href="{{ route('products.show', $product->id )}}">Ver</a>
+                <a href="{{ route('products.show', $product->id )}}" class="ui green mini basic button">Ver</a>
               </td>
               <td>Editar</td>
-              <td>Eliminar</td>
+              <td>
+                <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                  @csrf
+                  @method('delete')
+                  <button class="ui red mini basic button">Eliminar</button>
+                </form>
+              </td>
               </tr>
           @endforeach
         </tbody>
