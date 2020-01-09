@@ -27,7 +27,13 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-        return 'Producto registrado satisfactoriamente';
+        $product = new Product();
+        $product->name  = $request->input('name');
+        $product->short = $request->input('short');
+        $product->body  = $request->input('body');
+        $product->save();
+
+        return redirect()->route('products.index')->with('info', 'Producto registrado satisfactoriamente');
     }
 
     public function edit($id)
