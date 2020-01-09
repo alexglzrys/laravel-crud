@@ -30,3 +30,13 @@
 h1.header {
   margin-top: 2rem !important;
 }
+
+.product-name, .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-excerpt {
+  margin-bottom: 1rem !important;
+  color: gray;
+}

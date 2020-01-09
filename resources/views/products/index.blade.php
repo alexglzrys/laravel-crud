@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="twelve wide column">
-      <h3>Listado de Productos</h3>
+      <h3 class="title">
+        Listado de Productos
+        <a href="{{ route('products.create') }}" class="ui button primary">Nuevo</a>
+      </h3>
       <table class="ui red table striped selectable">
         <thead>
           <tr>
@@ -19,7 +22,9 @@
                 <strong>{{ $product->name }}</strong>
                 {{ $product->short }}
               </td>
-              <td>Ver</td>
+              <td>
+                <a href="{{ route('products.show', $product->id )}}">Ver</a>
+              </td>
               <td>Editar</td>
               <td>Eliminar</td>
               </tr>
